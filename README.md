@@ -13,6 +13,21 @@ sudo apt install -y cmake
 sudo apt install -y protobuf-compiler  
 sudo apt install libprotobuf-dev  
 
+If you see a missing any.proto error later, which means the protoc might be too old, you can download the latest protoc-3.x.x-linux-aarch_64.zip from GitHub and copy the "bin" and "include/google" directories to the system libraries. Then, modify mediapipe/setup.py like the following:  
+
+diff --git a/setup.py b/setup.py  
+index 61848de..462d91d 100644  
+--- a/setup.py
++++ b/setup.py
+@@ -208,7 +208,7 @@ class GeneratePyProtos(setuptools.Command):
+         sys.stderr.write('cannot find required file: %s\n' % source)
+         sys.exit(-1)
+
+-      protoc_command = [self._protoc, '-I.', '--python_out=.', source]  
++      protoc_command = [self._protoc, '-I.', '-I/usr/local/include', '--python_out=.', source]  
+       if subprocess.call(protoc_command) != 0:
+         sys.exit(-1)
+
 4.  
 
 
