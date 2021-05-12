@@ -54,10 +54,11 @@ modified mediapipe/third_party/BUILD b/third_party/BUILD:
 
 ## 7. 
         nano ~/.bashrc  
-add following to bottom:  
+add following to bottom:    
         export OPENBLAS_CORETYPE=ARMV8
 
-## 8. reboot
+## 8.  
+        reboot
 
 ## 9. Run demo:
         python3 facemesh_demo.py
