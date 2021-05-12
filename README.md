@@ -31,16 +31,12 @@ sed -i -e "/\"imgcodecs\"/d;/\"calib3d\"/d;/\"features2d\"/d;/\"highgui\"/d;/\"v
 sed -i -e "/-ljpeg/d;/-lpng/d;/-ltiff/d;/-lImath/d;/-lIlmImf/d;/-lHalf/d;/-lIex/d;/-lIlmThread/d;/-lrt/d;/-ldc1394/d;/-lavcodec/d;/-lavformat/d;/-lavutil/d;/-lswscale/d;/-lavresample/d" third_party/BUILD  
 
 5.3  
-diff --git a/third_party/BUILD b/third_party/BUILD  
-index ef408e4..51e1104 100644  
---- a/third_party/BUILD  
-+++ b/third_party/BUILD  
-@@ -110,6 +104,8 @@ cmake_external(  
-   "WITH_ITT": "OFF",  
-   "WITH_JASPER": "OFF",  
-   "WITH_WEBP": "OFF",  
-   "ENABLE_NEON": "OFF",  <--add this    
-   "WITH_TENGINE": "OFF",  <--add this  
+modified mediapipe/third_party/BUILD b/third_party/BUILD:    
+   "WITH_ITT": "OFF",   
+   "WITH_JASPER": "OFF",    
+   "WITH_WEBP": "OFF",    
+   "ENABLE_NEON": "OFF",  <--add this      
+   "WITH_TENGINE": "OFF",  <--add this    
   
 6. pip3 install ./dist/mediapipe-0.8-cp36-cp36m-linux_aarch64.whl
 
