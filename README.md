@@ -31,13 +31,13 @@ replace with:
 
 ## 5.  
 
-5.1   
+### 5.1   
                 sed -i -e "/\"imgcodecs\"/d;/\"calib3d\"/d;/\"features2d\"/d;/\"highgui\"/d;/\"video\"/d;/\"videoio\"/d" third_party/BUILD  
 
-5.2  
+### 5.2  
                 sed -i -e "/-ljpeg/d;/-lpng/d;/-ltiff/d;/-lImath/d;/-lIlmImf/d;/-lHalf/d;/-lIex/d;/-lIlmThread/d;/-lrt/d;/-ldc1394/d;/-lavcodec/d;/-lavformat/d;/-lavutil/d;/-lswscale/d;/-lavresample/d" third_party/BUILD  
 
-5.3  
+### 5.3  
 modified mediapipe/third_party/BUILD b/third_party/BUILD:    
    "WITH_ITT": "OFF",   
    "WITH_JASPER": "OFF",    
@@ -45,7 +45,7 @@ modified mediapipe/third_party/BUILD b/third_party/BUILD:
    "ENABLE_NEON": "OFF",  <--add this      
    "WITH_TENGINE": "OFF",  <--add this    
 
-5.4
+### 5.4 
 python3 mediapipe/setup.py gen_protos && python3 mediapipe/setup.py bdist_wheel  
 
 
