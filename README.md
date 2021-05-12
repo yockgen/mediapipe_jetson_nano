@@ -17,9 +17,10 @@ sudo apt install -y cmake
 sudo apt install -y protobuf-compiler
 sudo apt install libprotobuf-dev.
 
-Modified 2 files ./mediapipe/calculators/tensor/image_to_tensor_converter_opencv.cc and ./mediapipe/calculators/tensor/image_to_tensor_converter_gl_buffer.cc. Code below:  
+Modified 2 files 
+./mediapipe/calculators/tensor/image_to_tensor_converter_opencv.cc and ./mediapipe/calculators/tensor/image_to_tensor_converter_gl_buffer.cc. Code below:  
           return tensor;  
-was replaced by  
+replace with:  
           return absl::StatusOr<mediapipe::Tensor> ( mediapipe::Tensor(std::move(tensor)) );  
 
 
