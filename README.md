@@ -15,10 +15,10 @@ Running mediapipe on Jetson Nano
 
 If you see a missing any.proto error later, which means the protoc might be too old, you can download the latest protoc-3.x.x-linux-aarch_64.zip from GitHub and copy the "bin" and "include/google" directories to the system libraries. Then, modify mediapipe/setup.py like the following:  
 
-replace following: 
-                                protoc_command = [self._protoc, '-I.', '--python_out=.', source]  
+replace following:  
+                                protoc_command = [self._protoc, '-I.', '--python_out=.', source]      
 with:  
-                                protoc_command = [self._protoc, '-I.', '-I/usr/local/include', '--python_out=.', source]  
+                                protoc_command = [self._protoc, '-I.', '-I/usr/local/include', '--python_out=.', source]      
       
 ## 4.  
 
