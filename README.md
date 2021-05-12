@@ -38,7 +38,7 @@ replace with:
         sed -i -e "/-ljpeg/d;/-lpng/d;/-ltiff/d;/-lImath/d;/-lIlmImf/d;/-lHalf/d;/-lIex/d;/-lIlmThread/d;/-lrt/d;/-ldc1394/d;/-lavcodec/d;/-lavformat/d;/-lavutil/d;/-lswscale/d;/-lavresample/d" third_party/BUILD  
 
 ### 5.3  
-modified mediapipe/third_party/BUILD b/third_party/BUILD:    
+modified mediapipe/third_party/BUILD:      
    "WITH_ITT": "OFF",   
    "WITH_JASPER": "OFF",    
    "WITH_WEBP": "OFF",    
@@ -61,7 +61,7 @@ add following to bottom:
         reboot
 
 ## 9. Run demo:
-        python3 facemesh_demo.py
+        python3 mediapipe_jetson_nano/facemesh_demo.py
 
 
 
