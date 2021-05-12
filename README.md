@@ -24,8 +24,11 @@ with:
       
 ## 4.  
 
-Modified 2 files 
-./mediapipe/calculators/tensor/image_to_tensor_converter_opencv.cc and ./mediapipe/calculators/tensor/image_to_tensor_converter_gl_buffer.cc. Code below:  
+Modified 2 files   
+* ./mediapipe/calculators/tensor/image_to_tensor_converter_opencv.cc 
+* ./mediapipe/calculators/tensor/image_to_tensor_converter_gl_buffer.cc.    
+
+Code below:  
 
 
                                 return tensor;  
