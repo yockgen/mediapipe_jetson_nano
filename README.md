@@ -39,8 +39,8 @@ index ef408e4..51e1104 100644
    "WITH_ITT": "OFF",  
    "WITH_JASPER": "OFF",  
    "WITH_WEBP": "OFF",  
-+   "ENABLE_NEON": "OFF",  
-+   "WITH_TENGINE": "OFF",  
+   "ENABLE_NEON": "OFF",  <--add this    
+   "WITH_TENGINE": "OFF",  <--add this  
   
 5.
    pip3 install ./dist/mediapipe-0.8-cp36-cp36m-linux_aarch64.whl
