@@ -30,7 +30,7 @@ replace with:
 
 
 ## 5.  
-
+        cd mediapipe
 ### 5.1
         sed -i -e "/\"imgcodecs\"/d;/\"calib3d\"/d;/\"features2d\"/d;/\"highgui\"/d;/\"video\"/d;/\"videoio\"/d" third_party/BUILD  
 
