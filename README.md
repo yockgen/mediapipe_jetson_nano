@@ -10,8 +10,8 @@ Running mediapipe on Jetson Nano
 
 
 ## 3.
-sudo apt install -y protobuf-compiler  
-sudo apt install libprotobuf-dev  
+                                sudo apt install -y protobuf-compiler  
+                                sudo apt install libprotobuf-dev  
 
 If you see a missing any.proto error later, which means the protoc might be too old, you can download the latest protoc-3.x.x-linux-aarch_64.zip from GitHub and copy the "bin" and "include/google" directories to the system libraries. Then, modify mediapipe/setup.py like the following:  
 
