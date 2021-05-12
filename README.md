@@ -45,21 +45,22 @@ modified mediapipe/third_party/BUILD b/third_party/BUILD:
    "ENABLE_NEON": "OFF",  <--add this      
    "WITH_TENGINE": "OFF",  <--add this    
 
-### 5.4 
-python3 mediapipe/setup.py gen_protos && python3 mediapipe/setup.py bdist_wheel  
+### 5.4
+        python3 mediapipe/setup.py gen_protos && python3 mediapipe/setup.py bdist_wheel  
 
 
-## 6. pip3 install mediapipe/dist/mediapipe-0.8-cp36-cp36m-linux_aarch64.whl
+## 6. 
+        pip3 install mediapipe/dist/mediapipe-0.8-cp36-cp36m-linux_aarch64.whl
 
 ## 7. 
-nano ~/.bashrc  
+        nano ~/.bashrc  
 add following to bottom:  
-export OPENBLAS_CORETYPE=ARMV8
+        export OPENBLAS_CORETYPE=ARMV8
 
 ## 8. reboot
 
 ## 9. Run demo:
-python3 facemesh_demo.py
+        python3 facemesh_demo.py
 
 
 
