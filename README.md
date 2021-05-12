@@ -47,8 +47,8 @@ index ef408e4..51e1104 100644
 5. pip3 install ./dist/mediapipe-0.8-cp36-cp36m-linux_aarch64.whl
 
 6. 
-nano ~/.bashrc
-add following to bottom:
+nano ~/.bashrc  
+add following to bottom:  
 export OPENBLAS_CORETYPE=ARMV8
 
 7. reboot
