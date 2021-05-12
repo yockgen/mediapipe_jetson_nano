@@ -14,6 +14,8 @@ sudo apt install -y protobuf-compiler
 sudo apt install libprotobuf-dev  
 
 4.  
+
+
 Modified 2 files 
 ./mediapipe/calculators/tensor/image_to_tensor_converter_opencv.cc and ./mediapipe/calculators/tensor/image_to_tensor_converter_gl_buffer.cc. Code below:  
           return tensor;  
@@ -22,7 +24,7 @@ replace with:
 
 
 5.  
-cd ~/mediapipe  
+
 
 5.1   
 sed -i -e "/\"imgcodecs\"/d;/\"calib3d\"/d;/\"features2d\"/d;/\"highgui\"/d;/\"video\"/d;/\"videoio\"/d" third_party/BUILD  
@@ -37,8 +39,12 @@ modified mediapipe/third_party/BUILD b/third_party/BUILD:
    "WITH_WEBP": "OFF",    
    "ENABLE_NEON": "OFF",  <--add this      
    "WITH_TENGINE": "OFF",  <--add this    
-  
-6. pip3 install ./dist/mediapipe-0.8-cp36-cp36m-linux_aarch64.whl
+
+5.4
+python3 mediapipe/setup.py gen_protos && python3 mediapipe/setup.py bdist_wheel  
+
+
+6. pip3 install mediapipe/dist/mediapipe-0.8-cp36-cp36m-linux_aarch64.whl
 
 7. 
 nano ~/.bashrc  
