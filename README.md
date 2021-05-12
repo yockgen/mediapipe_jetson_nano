@@ -2,11 +2,11 @@
 Running mediapipe on Jetson Nano
 
 ## 1.
-                                    git clone https://github.com/google/mediapipe.git
+        git clone https://github.com/google/mediapipe.git
 
 ## 2.
-sudo apt install -y python3-dev
-sudo apt install -y cmake
+        sudo apt install -y python3-dev
+        sudo apt install -y cmake
 
 
 ## 3.
