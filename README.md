@@ -1,15 +1,15 @@
 # mediapipe_jetson_nano
 Running mediapipe on Jetson Nano
 
-1.
+##1.
 git clone https://github.com/google/mediapipe.git
 
-2.
+##2.
 sudo apt install -y python3-dev
 sudo apt install -y cmake
 
 
-3.
+##3.
 sudo apt install -y protobuf-compiler  
 sudo apt install libprotobuf-dev  
 
@@ -28,7 +28,7 @@ index 61848de..462d91d 100644
        if subprocess.call(protoc_command) != 0:
          sys.exit(-1)
 
-4.  
+##4.  
 
 
 Modified 2 files 
@@ -38,8 +38,7 @@ replace with:
           return absl::StatusOr<mediapipe::Tensor> ( mediapipe::Tensor(std::move(tensor)) );  
 
 
-5.  
-
+##5.  
 
 5.1   
 sed -i -e "/\"imgcodecs\"/d;/\"calib3d\"/d;/\"features2d\"/d;/\"highgui\"/d;/\"video\"/d;/\"videoio\"/d" third_party/BUILD  
@@ -59,16 +58,16 @@ modified mediapipe/third_party/BUILD b/third_party/BUILD:
 python3 mediapipe/setup.py gen_protos && python3 mediapipe/setup.py bdist_wheel  
 
 
-6. pip3 install mediapipe/dist/mediapipe-0.8-cp36-cp36m-linux_aarch64.whl
+##6. pip3 install mediapipe/dist/mediapipe-0.8-cp36-cp36m-linux_aarch64.whl
 
-7. 
+##7. 
 nano ~/.bashrc  
 add following to bottom:  
 export OPENBLAS_CORETYPE=ARMV8
 
-8. reboot
+##8. reboot
 
-9. Run demo:
+##9. Run demo:
 python3 facemesh_demo.py
 
 
