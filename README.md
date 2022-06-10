@@ -1,6 +1,6 @@
-# mediapipe_jetson_nano
-Running mediapipe on Jetson Nano
+# Running mediapipe on Jetson Nano
 
+## preparation
 git clone https://github.com/JetsonHacksNano/installSwapfile.git     
 cd installSwapfile/   
 ./installSwapfile.sh       
@@ -23,12 +23,14 @@ chmod +x ./setup_opencv.sh
 ./setup_opencv.sh    
 sudo pip3 install opencv_contrib_python       
   
+## install mediapipe  
 git clone https://github.com/PINTO0309/mediapipe-bin       
 cd mediapipe-bin/  
 sudo apt install curl    
 unzip v0.8.5.zip 
 pip3 install ./v0.8.5/numpy119x/py36/mediapipe-0.8.5_cuda102-cp36-cp36m-linux_aarch64.whl 
 
-git clone 
+## test case
+git clone https://github.com/yockgen/mediapipe_jetson_nano.git
 cd mediapipe_jetson_nano/  
 python3 facemesh_demo.py    
